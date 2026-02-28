@@ -1,0 +1,27 @@
+package com.lpu;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Driver {
+	public static void main(String[] args) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+		
+//		Student st = context.getBean("myStudent",Student.class);
+//		System.out.println(st.getId());
+//		System.out.println(st.getName());
+//		st.study();
+		
+//		Parameterised_constructor_student st = context.getBean("Parcons_student",Parameterised_constructor_student.class);
+//		System.out.println(st.getId());
+//		System.out.println(st.getName());
+//		System.out.println(st.getSalary());
+		
+		Collage c = context.getBean("collage",Collage.class);
+		System.out.println(c.getId());
+		System.out.println(c.getName());
+		System.out.println(c.getLocation());
+		System.out.println(c.getDepartment());
+		
+	}
+}

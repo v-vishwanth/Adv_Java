@@ -1,0 +1,71 @@
+package com.lpu;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.lpu.StudentDao.EmployeeDAO;
+import com.lpu.entity.Employee;
+
+@Controller
+public class MyController {
+	@RequestMapping("/register")
+	public String register() {
+		return "register";
+	}
+	@RequestMapping("/save")
+	public void save(
+			@RequestParam("id") int id,
+			@RequestParam("name") String name,
+			@RequestParam("phone") long phone,
+			@RequestParam("email") String email
+			){
+		Employee emp = new Employee();
+		emp.setId(id);
+		emp.setName(name);
+		emp.setPhone(phone);
+		emp.setEmail(email);
+		
+		EmployeeDAO dao = new EmployeeDAO();
+		dao.saveEmployee(emp);
+	}
+	@RequestMapping("/register2")
+	public String register2(Model model) {
+		model.addAttribute("employee", new Employee());
+		return "register2";
+	}
+	@RequestMapping("/save2")
+	public String save2(@ModelAttribute Employee employee) {
+		EmployeeDAO dao = new EmployeeDAO();
+		dao.saveEmployee(employee);
+		return "redirect:/findall";
+	}
+	@RequestMapping("/findall")
+	public String findallEmp(Model model) {
+		EmployeeDAO dao = new EmployeeDAO();
+		model.addAttribute("list", dao.findEmp());
+		return "displayAll";
+		
+	}
+	@RequestMapping("/delete")
+	public String deleteEmpID(@RequestParam(value = "id") int id) {
+		EmployeeDAO dao = new EmployeeDAO();
+		dao.deleteEmp(id);
+		return "redirect:/findall";
+	}
+	
+	@RequestMapping("/update")
+	public String UpdateById(@RequestParam(value = "id")int id,Model model) {
+		EmployeeDAO dao = new EmployeeDAO();
+		model.addAttribute("employee", dao.findEmp(id));
+		return "edit";
+	}
+	
+	
+	
+	
+	
+}

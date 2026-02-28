@@ -1,0 +1,17 @@
+package com.lpu.DI;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+@ComponentScan(basePackages = "com.lpu.DI")
+@Configuration
+public class Myconfig {
+	@Bean
+	public EntityManagerFactory getEMF() {
+		return Persistence.createEntityManagerFactory("dev");
+	}
+}

@@ -1,0 +1,7 @@
+package com.lpu.MultipleInterfaceReferance;
+
+public class Apple implements Fruit {
+	public void eat() {
+		System.out.println("Eating Apple");
+	}
+}

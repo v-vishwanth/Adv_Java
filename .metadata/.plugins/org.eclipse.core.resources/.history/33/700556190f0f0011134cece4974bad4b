@@ -1,0 +1,42 @@
+package com.lpu.controller;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.lpu.entity.Department;
+import com.lpu.entity.Student;
+import com.lpu.service.DepartmentService;
+import com.lpu.service.StudentService;
+
+public class Driver {
+	// 1. Start Spring Container
+    AnnotationConfigApplicationContext context =
+            new AnnotationConfigApplicationContext(AppConfig.class);
+
+    // 2. Get Services
+    DepartmentService departmentService =
+            context.getBean(DepartmentService.class);
+
+    StudentService studentService =
+            context.getBean(StudentService.class);
+
+    // 3. Create Department
+    Department dept = new Department();
+    dept.setName("Computer Science");
+    departmentService.addDepartment(dept);
+
+    // 4. Create Student
+    Student student = new Student();
+    student.set()
+    student.setEmail("rahul@gmail.com");
+
+    // 5. Assign Student to Department
+    departmentService.assignStudentToDepartment(dept.getId(),student);
+
+    // 6. Fetch Student
+    Student fetchedStudent = studentService.getStudentById(student.getId());
+    System.out.println(
+            fetchedStudent.getName() + " - " +
+            fetchedStudent.getDepartment().getName()
+    );
+
+}

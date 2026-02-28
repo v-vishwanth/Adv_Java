@@ -1,0 +1,45 @@
+package com.lpu.StudentDao;
+
+import java.util.List;
+import java.util.Queue;
+
+import com.lpu.entity.Employee;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
+
+public class EmployeeDAO {
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
+	
+	public void saveEmployee(Employee emp) {
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+		em.persist(emp);
+		et.commit();
+	}
+	
+	public List<Employee> findEmp(){
+		EntityManager em = emf.createEntityManager();
+		Query query = em.createQuery("select e from Employee e");
+		List<Employee> list = query.getResultList();
+		return list;
+	}
+	
+	public void deleteEmp(int id) {
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+		Employee emp = em.find(Employee.class, id);
+		em.remove(emp);
+		et.commit();
+	}
+	public Employee findEmp(int id) {
+		EntityManager em = emf.createEntityManager();
+		Employee emp = em.find(Employee.class, id);
+		return emp;
+	}
+}

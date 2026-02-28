@@ -1,0 +1,24 @@
+package com.lpu.PrototypeScope;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+@Component
+
+//@Scope(value = "prototype")------> used to create the different object reference.......if not used it uses the defalult singleton
+
+public class person {
+	@Value("101")
+	private int id;
+	@Value("Donkey")
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+		
+}

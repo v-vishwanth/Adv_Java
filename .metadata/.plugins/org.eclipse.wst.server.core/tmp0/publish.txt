@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Feb 26 15:48:17 IST 2026
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\vishw\\.m2\\repository\\org\\springframework\\spring-web\\7.0.3\\spring-web-7.0.3.jar=WEB-INF/lib/spring-web-7.0.3.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\vishw\\.m2\\repository\\org\\springframework\\spring-web\\7.0.3\\spring-web-7.0.3.jar=WEB-INF/lib/spring-web-7.0.3.jar

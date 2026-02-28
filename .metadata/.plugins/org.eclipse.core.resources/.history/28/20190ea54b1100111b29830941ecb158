@@ -1,0 +1,17 @@
+package com.lpu;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller    // take request and send response to client(Browser)
+public class Mycontroller {
+	@RequestMapping("/hi")
+	public String takeRequestHi() {
+		return "page.jsp";
+	}
+	@RequestMapping("/login")
+	public String takeLogin() {
+		return "login.jsp";
+	}
+
+}

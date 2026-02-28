@@ -1,0 +1,5 @@
+package com.lpu.dao;
+
+public class DepartmentDao {
+
+}

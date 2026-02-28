@@ -1,0 +1,25 @@
+package com.lpu.lifeCycle;
+
+import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+//@Component
+public class BeanLifeCycle {
+	public BeanLifeCycle() {
+		System.out.println("Instantiation of Bean");
+	}
+	@PostConstruct
+	public void init(){
+		System.out.println("Initialization of bean");
+		
+	}
+	public void useBean() {
+		System.out.println("bean is in use");
+	}
+	@PreDestroy
+	public void destroy() {
+		System.out.println("destroy.............db conncetion close");
+	}
+}

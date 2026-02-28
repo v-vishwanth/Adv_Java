@@ -1,0 +1,21 @@
+package com.lpu.lifeCycle;
+
+import java.applet.AppletContext;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.lpu.DI.Myconfig;
+
+public class driver {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Myconfig.class);
+//		BeanLifeCycle bean = context.getBean(BeanLifeCycle.class);
+//		bean.useBean();
+//		context.close();
+		
+		DBconnection bean = context.getBean(DBconnection.class);
+		bean.fetch();
+		context.close();
+	}
+}

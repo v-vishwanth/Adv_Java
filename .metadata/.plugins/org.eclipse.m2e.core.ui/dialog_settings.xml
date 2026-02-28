@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\mvc2"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\mvc1\src\main\java\com\lpu\Mycontroller.java"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\Student_Management_System"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\Spring_core"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\practice"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\Spring_core\src\main\java\com\lpu\Driver.java"/>
+			<item value="C:\Users\vishw\capgemini\advance java\Adv_Java"/>
+			<item value="C:\Users\vishw\capgemini\advance java\Hibernet"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\Hibernet"/>
+			<item value="C:\Users\vishw\capgemini\advance java\workspace_advan_java\demp_project\pom.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.lpu.Employee"/>
+		</list>
+		<list key="groupId">
+			<item value="com.lpu"/>
+		</list>
+		<list key="artifactId">
+			<item value="Employee"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

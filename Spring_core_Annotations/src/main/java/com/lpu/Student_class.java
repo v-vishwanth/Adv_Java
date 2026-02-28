@@ -1,0 +1,45 @@
+package com.lpu;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component(value = "Student")
+public class Student_class {
+	@Value("XYZ")
+	private String name;
+	@Value("25")
+	private int age;
+	@Value("HYD")
+	private String location;
+	
+	private studentId stdId;
+	
+	public Student_class() {
+		
+	}
+	@Autowired
+	public Student_class(studentId stID) {
+		this.stdId = stID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public studentId getStdId() {
+		return stdId;
+	}
+	
+	
+	
+	
+}

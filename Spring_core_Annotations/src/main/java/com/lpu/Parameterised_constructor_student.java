@@ -1,0 +1,30 @@
+package com.lpu;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component(value = "Parcons_student")
+public class Parameterised_constructor_student {
+	private int id;
+	private String name;
+	private double salary;
+	
+	public Parameterised_constructor_student(@Value("108") int id,@Value("XYZ") String name,@Value("4234.343") double salary) {
+		this.id = id;
+		this.name  = name;
+		this.salary = salary;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Spring_core/src/main/java/conflig.xml&apos; to &apos;config.xml&apos;" description="Rename resource &apos;conflig.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/conflig.xml" name="config.xml" stamp="1771224154355" updateReferences="true"/>
+</session>

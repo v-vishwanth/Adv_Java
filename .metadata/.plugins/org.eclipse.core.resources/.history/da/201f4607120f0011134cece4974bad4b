@@ -1,0 +1,32 @@
+package com.lpu.controller;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.lpu.entity.Department;
+import com.lpu.entity.Student;
+import com.lpu.service.DepartmentService;
+import com.lpu.service.StudentService;
+
+public class Driver {
+	public static void main(String[] args) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+		DepartmentService departmentService = context.getBean(DepartmentService.class);
+
+		StudentService studentService = context.getBean(StudentService.class);
+
+		Department dept = new Department();
+		dept.setName("Computer Science");
+		departmentService.addDepartment(dept);
+		
+		Student student = new Student();
+		student.setName("Rahul");
+		student.setEmail("rahul@gmail.com");
+		
+		departmentService.assignStudentToDepartment(dept.getId(), student);
+		Student fetchedStudent = studentService.getStudentById(student.getId());
+		System.out.println(fetchedStudent.getName() + " - " + fetchedStudent.getDepartment().getName());
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.lpu.MultipleInterfaceReferance;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component
+public class person {
+	@Value("101")
+	private int id;
+	@Value("Donkey")
+	private String name;
+	@Autowired
+	private vehicle v;
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public vehicle getV() {
+		return v;
+	}
+	
+	@Qualifier(value = "mango")
+	private Fruit f;
+	public Fruit getf() {
+		return f;
+	}
+	
+	
+}
